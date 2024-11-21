@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Registrarse</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <?php require 'partials/header.php'; ?>
+
+    <?php if (!empty($message)): ?>
+        <p><?= $message ?></p>
+    <?php endif; ?>
+
+    <h1>Registrarse</h1>
+    <span>o <a href="login.php">Iniciar sesión</a></span>
+
+    <form action="signup.php" method="POST">
+        <input name="name" type="text" placeholder="Ingresa tu nombre" required>
+        <input name="lastname" type="text" placeholder="Ingresa tu apellido" required>
+        <input name="email" type="text" placeholder="Ingresa tu email" required>
+        <input name="password" type="password" placeholder="Ingresa tu Password" required>
+        <input name="confirm_password" type="password" placeholder="Confirmar Password" required>
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+</html>
